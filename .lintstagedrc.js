@@ -1,11 +1,12 @@
 const path = require('path');
 
 const buildEslintCommand = (filenames) => {
-  console.log('====', filenames);
+  // next lint 运行时  会执行eslinttc和next.config.ts里的eslint配置
 
-  return `next lint --fix --file ${filenames
+  return `next lint --file ${filenames
     .map((f) => path.relative(process.cwd(), f))
-    .join(' --file ')}`;
+    .join(' --file ')} --max-warnings 0 --fix`;
+  // return `eslint --max-warnings 0 --cache --cache-location .cache/eslint --ignore-path .eslintignore ${filenames.join(' ')}`;
 };
 
 module.exports = {

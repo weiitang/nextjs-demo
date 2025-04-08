@@ -15,4 +15,13 @@
     // "@next/next/no-duplicate-head": "off",
     // "no-before-interactive-script-outside-document": "off"
   }
+  // "overrides": [
+  //   {
+  //     "files": ["app/page.tsx"],
+  //     "rules": {
+  //       "no-console": "off",
+  //       "@typescript-eslint/no-empty-object-type": "off"
+  //     }
+  //   }
+  // ]
 }
